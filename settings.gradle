@@ -11,10 +11,15 @@ pluginManagement {
         }
          */
         if (true /* In JetBrains Fork */) {
+            mavenLocal()
             mavenCentral()
             google()
             maven {
                 url = "https://plugins.gradle.org/m2/"
+                content {
+                    // don't serve skiko from here
+                    excludeGroup("org.jetbrains.skiko")
+                }
             }
         }
     }
@@ -174,6 +179,16 @@ switch (cacheSetting) {
 rootProject.name = "compose-multiplatform-core"
 
 dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://maven.pkg.jetbrains.space/public/p/compose/dev"
+            content {
+                 excludeGroup "org.jetbrains.skiko"
+        }}
+    }
     versionCatalogs {
         libs {
             def metalavaOverride = System.getenv("METALAVA_VERSION")

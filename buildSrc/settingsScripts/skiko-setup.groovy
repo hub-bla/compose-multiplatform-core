@@ -29,8 +29,8 @@ class SkikoSetup {
                 libs {
                     def skikoOverride = System.getenv("SKIKO_VERSION")
                     if (skikoOverride != null) {
-                        logger.warn("Using custom version ${skikoOverride} of SKIKO due to " +
-                                "SKIKO_VERSION being set.")
+//                        logger.warn("Using custom version ${skikoOverride} of SKIKO due to " +
+//                                "SKIKO_VERSION being set.")
                         version('skiko', skikoOverride)
                     }
                     String os = System.getProperty("os.name").toLowerCase(Locale.US)

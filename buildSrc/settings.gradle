@@ -42,6 +42,12 @@ include ":imports:glance-layout-generator"
 include ":imports:stableaidl-gradle-plugin"
 
 dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url "https://maven.pkg.jetbrains.space/public/p/compose/dev" }
+    }
     versionCatalogs {
         libs {
             def agpOverride = System.getenv("GRADLE_PLUGIN_VERSION")
