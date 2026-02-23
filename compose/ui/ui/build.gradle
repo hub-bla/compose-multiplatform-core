@@ -63,7 +63,7 @@ androidXMultiplatform {
     mac()
     ios()
     js()
-    wasmJs()
+//    wasmJs()
 
     defaultPlatform(PlatformIdentifier.ANDROID)
 
@@ -288,15 +288,15 @@ androidXMultiplatform {
             }
         }
 
-        webMain.dependencies {
-            api(libs.kotlinXw3c)
-        }
-
-        wasmJsMain.dependencies {
-            implementation(libs.skikoWasmJs)
-            implementation(libs.skikoJsWasmRuntime)
-        }
-
+//        webMain.dependencies {
+//            api(libs.kotlinXw3c)
+//        }
+//
+//        wasmJsMain.dependencies {
+//            implementation(libs.skikoWasmJs)
+//            implementation(libs.skikoJsWasmRuntime)
+//        }
+//
         // TODO: Align it with AOSP or make explicit
         configureEach {
             languageSettings.optIn("androidx.compose.ui.ExperimentalComposeUiApi")

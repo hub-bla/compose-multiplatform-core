@@ -48,7 +48,7 @@ androidXMultiplatform {
     mac()
     ios()
     js()
-    wasmJs()
+//    wasmJs()
 
     defaultPlatform(PlatformIdentifier.ANDROID)
 
@@ -203,11 +203,11 @@ androidXMultiplatform {
             dependsOn(darwinTest)
         }
 
-        wasmJsMain {
-            dependencies {
-                implementation(libs.kotlinXw3c)
-            }
-        }
+//        wasmJsMain {
+//            dependencies {
+//                implementation(libs.kotlinXw3c)
+//            }
+//        }
 
         configureEach {
             languageSettings.optIn("androidx.compose.foundation.ExperimentalFoundationApi")
